@@ -20,6 +20,16 @@ public class FindElementTest {
 	}
 	
 	@Test
+	public void testThreeOneGetIndexFirst() {
+	assertEquals(0, (FindElement.getIndexFirst(new int [] {1,3,6,2}, 4, 1)));
+	}
+	
+	@Test
+	public void testThreeTwoGetIndexFirst() {
+	assertEquals(3, (FindElement.getIndexFirst(new int [] {1,3,6,2}, 4, 2)));
+	}
+	
+	@Test
 	public void testFourGetIndexFirst() {
 	assertEquals(-1, (FindElement.getIndexFirst(new int [] {1,3,6,2}, 4, 8)));
 	}
@@ -40,6 +50,16 @@ public class FindElementTest {
 	}
 	
 	@Test
+	public void testThreeOneGetIndexSecond() {
+	assertEquals(0, (FindElement.getIndexSecond(new int [] {1,3,6,2}, 4, 1)));
+	}
+	
+	@Test
+	public void testThreeTwoGetIndexSecond() {
+	assertEquals(3, (FindElement.getIndexSecond(new int [] {1,3,6,2}, 4, 2)));
+	}
+	
+	@Test
 	public void testFourGetIndexSecond() {
 	assertEquals(-1, (FindElement.getIndexSecond(new int [] {1,3,6,2}, 4, 8)));
 	}
@@ -56,12 +76,22 @@ public class FindElementTest {
 
 	@Test
 	public void testThreeGetIndexThird() {
-	assertEquals(1, (FindElement.getIndexThird(new int [] {1,3,6,2}, 4, 3)));
+	assertEquals(1, (FindElement.getIndexThird(new int [] {1,3,6,0}, 4, 3)));
+	}
+	
+	@Test
+	public void testThreeOneGetIndexThird() {
+	assertEquals(0, (FindElement.getIndexThird(new int [] {1,3,6,0}, 4, 1)));
+	}
+	
+	@Test
+	public void testThreeTwoGetIndexThird() {
+	assertEquals(2, (FindElement.getIndexThird(new int [] {1,3,6,0}, 4, 6)));
 	}
 	
 	@Test
 	public void testFourGetIndexThird() {
-	assertEquals(-1, (FindElement.getIndexThird(new int [] {1,3,6,2}, 4, 8)));
+	assertEquals(-1, (FindElement.getIndexThird(new int [] {1,3,6,0}, 4, 8)));
 	}	
 
 	@Test
@@ -77,6 +107,16 @@ public class FindElementTest {
 	@Test
 	public void testThreeGetIndexFourth() {
 	assertEquals(3, (FindElement.getIndexFourth(new int [] {1,4,6,3}, 4, 3)));
+	}
+	
+	@Test
+	public void testThreeOneGetIndexFourth() {
+	assertEquals(0, (FindElement.getIndexFourth(new int [] {1,4,6,3}, 4, 1)));
+	}
+	
+	@Test
+	public void testThreeTwoGetIndexFourth() {
+	assertEquals(2, (FindElement.getIndexFourth(new int [] {1,4,6,3}, 4, 6)));
 	}
 	
 	@Test
